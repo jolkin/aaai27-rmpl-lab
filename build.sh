@@ -12,4 +12,5 @@ out = ('<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n'
        + head + "</style>\n</head>\n<body>\n" + body.lstrip() + "</body>\n</html>\n")
 open("public/index.html", "w").write(out)
 PY
-echo "wrote public/index.html"
+rm -rf public/headshots && cp -R headshots public/headshots
+echo "wrote public/index.html and public/headshots/"
